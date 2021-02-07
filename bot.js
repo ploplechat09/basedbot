@@ -27,7 +27,7 @@ tweetBot.get('search/tweets', params,  (err, data, res) => {
             })
         }
     }else{
-        console.log(err)
+        console.log(err) //comment
     }
 })
 
