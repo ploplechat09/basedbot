@@ -9,7 +9,7 @@ const params = {
 }
 
 const favParams = {
-    q: '$based OR $basedghouls filter:media',
+    q: '$based OR $basedghouls',
     count: 5,
     lang: 'en'
 }
