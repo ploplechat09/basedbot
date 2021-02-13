@@ -3,7 +3,7 @@ const config = require('./config.js');
 const tweetBot = new Twit(config);
 
 const params = {
-    q: '$based AND $Moonbase filter:media',
+    q: '$based AND BasedLoans filter:media',
     count: 5,
     lang: 'en'
 }
