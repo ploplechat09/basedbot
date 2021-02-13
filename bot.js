@@ -9,7 +9,7 @@ const params = {
 }
 
 const favParams = {
-    q: '$based OR $basedghouls',
+    q: '$based OR basedloans OR basedloan',
     count: 5,
     lang: 'en'
 }
