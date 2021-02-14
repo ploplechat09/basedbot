@@ -35,7 +35,7 @@ tweetBot.get('search/tweets', favParams,  (err, data, res) => {
     if(!err){
         for(let i=0; i < data.statuses.length; i++){
             let tweetID = {id: data.statuses[i].id_str}
-            tweetBot.post(`Retweet successful`, tweetID, (err, res) => {
+            tweetBot.post('statuses/retweet', tweetID, (err, res) => {
                 if(!err){
                     console.log(`Favorite successful`)
                 }else{
