@@ -9,7 +9,7 @@ const params = {
 }
 
 const favParams = {
-    q: '$based OR basedloans OR $BASED filter:links',
+    q: '$based OR $BASED filter:links',
     count: 5,
     lang: 'en'
 }
