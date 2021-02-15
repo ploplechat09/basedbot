@@ -3,13 +3,19 @@ const config = require('./config.js');
 const tweetBot = new Twit(config);
 
 const params = {
-    q: '$based AND $BASED filter:media',
+    q: '$based AND $BASED AND BasedLoans filter:media',
     count: 5,
     lang: 'en'
 }
 
 const favParams = {
-    q: '$based OR $BASED filter:links',
+    q: '$based AND $BASED AND BasedLoans filter:links',
+    count: 5,
+    lang: 'en'
+}
+
+const likeParams = {
+    q: '$based AND $BASED AND BasedLoans',
     count: 5,
     lang: 'en'
 }
@@ -47,3 +53,15 @@ tweetBot.get('search/tweets', favParams,  (err, data, res) => {
         console.log(err)
     }
 })
+
+tweetBot.get('search/tweets', likeParams,  (err, data, res) => {
+    if(!err){
+        for(let i=0; i < data.statuses.length; i++){
+            let tweetID = {id: data.statuses[i].id_str}
+            tweetBot.post('favorites/create', tweetID, (err, res) => {
+                if(!err){
+                    console.log(`Favorite successful`)
+                }else{
+                    console.log(err.message)
+                }
+            })
