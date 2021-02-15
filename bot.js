@@ -15,7 +15,7 @@ const favParams = {
 }
 
 const likeParams = {
-    q: 'BasedLoans AND (Based Loans)',
+    q: 'BasedLoans AND $BasedLoans',
     count: 5,
     lang: 'en'
 }
