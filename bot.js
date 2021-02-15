@@ -3,19 +3,19 @@ const config = require('./config.js');
 const tweetBot = new Twit(config);
 
 const params = {
-    q: '$based AND $BASED AND BasedLoans filter:media',
+    q: '$based AND $BASED filter:media',
     count: 5,
     lang: 'en'
 }
 
 const favParams = {
-    q: '$based AND $BASED AND BasedLoans filter:links',
+    q: '$based AND $BASED filter:links',
     count: 5,
     lang: 'en'
 }
 
 const likeParams = {
-    q: '$based AND $BASED AND BasedLoans',
+    q: 'BasedLoans and "Based Loans"',
     count: 5,
     lang: 'en'
 }
@@ -65,3 +65,8 @@ tweetBot.get('search/tweets', likeParams,  (err, data, res) => {
                     console.log(err.message)
                 }
             })
+        }
+    }else{
+        console.log(err)
+    }
+})
