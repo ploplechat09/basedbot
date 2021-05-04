@@ -3,19 +3,19 @@ const config = require('./config.js');
 const tweetBot = new Twit(config);
 
 const params = {
-    q: '$based OR $BASED filter:media',
+    q: '@basedprotocol OR $BLO filter:media',
     count: 5,
     lang: 'en'
 }
 
 const favParams = {
-    q: '$based OR $BASED filter:links',
+    q: '$BLO OR @basedprotocol filter:links',
     count: 5,
     lang: 'en'
 }
 
 const likeParams = {
-    q: '$based OR $BASED',
+    q: '@basedprotocol OR $BLO',
     count: 5,
     lang: 'en'
 }
