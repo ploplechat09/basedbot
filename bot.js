@@ -9,13 +9,13 @@ const params = {
 }
 
 const favParams = {
-    q: ' #mbbased OR @basedprotocol filter:links',
+    q: '#mbbased OR @basedprotocol filter:links',
     count: 5,
     lang: 'en'
 }
 
 const likeParams = {
-    q: '@BASEDghouls OR #mbbased',
+    q: '@BASEDghouls OR basedghouls',
     count: 5,
     lang: 'en'
 }
